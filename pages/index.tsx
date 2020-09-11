@@ -1,14 +1,11 @@
-import Link from 'next/link'
 import Layout from '../components/Layout'
+import { Typography } from '@material-ui/core'
 
 const IndexPage = () => (
-  <Layout title="Home | Next.js + TypeScript Example">
-    <h1>Hello Next.js 👋</h1>
-    <p>
-      <Link href="/about">
-        <a>About</a>
-      </Link>
-    </p>
+  <Layout key="index" title="React Version of My FYP">
+    <Typography variant="body1">
+      This is Home Page
+    </Typography>
   </Layout>
 )
 
