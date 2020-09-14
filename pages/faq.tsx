@@ -1,7 +1,8 @@
 import Layout from "../components/Layout";
 import DataTable from "../components/Table";
-import { Grid } from "@material-ui/core";
 import Cards from "../components/Cards";
+
+import { Grid } from "@material-ui/core";
 import { warmUp } from '../handler'
 
 interface Props {
@@ -33,21 +34,13 @@ const FaqPage = ({ testingProps }: Props) => {
     })
 
     return (
-        <Layout>
+        <Layout title="React Version Of My FYP">
             <Grid container spacing={3}>
                 {cardsItem}
             </Grid>
             <DataTable />
         </Layout>
     )
-}
-
-FaqPage.getInitialProps = async () => {
-
-    return await warmUp()
-        .then((data) => {
-            return { testingProps: data }
-        })
 }
 
 export default FaqPage;
